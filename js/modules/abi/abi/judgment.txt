@@ -1,0 +1,55 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_address",
+				"type": "address"
+			},
+			{
+				"name": "judgmentInformationId",
+				"type": "string"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "birthOfDate",
+				"type": "string"
+			},
+			{
+				"name": "password",
+				"type": "string"
+			}
+		],
+		"name": "addJudgmentInformation",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_address",
+				"type": "address"
+			},
+			{
+				"name": "password",
+				"type": "string"
+			}
+		],
+		"name": "checkIdAndPassword",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

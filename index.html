@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VotingApp</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="./js/core/jquery.min.js"></script>
+<link rel="stylesheet" href="css/angular-datepicker.css"/>
+<script src="https://cdn.ethers.io/scripts/ethers-v3.min.js"
+charset="utf-8"
+type="text/javascript">
+</script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+<script src="./js/modules/firebasecom.js"></script>
+<script src="./js/modules/abi.js"></script>
+<script src="./js/loading.js"></script>
+<script src="./js/modules/ethtx.js"></script>
+<script src="./js/modules/web3.js"></script>
+<script src="./js/modules/angular-time-picker.js"></script>
+<script src="./js/modules/angular-datepicker.js"></script>
+<script src="./js/modules/service.js"></script>
+<script src="./js/modules/controllers.js"></script>
+<script src="./js/modules/directives.js"></script>
+    
+<!--===============================================================================================-->
+
+<script src ="js/modules/app.js">
+
+                                                      
+</script>
+
+</head>
+<body ng-app="starter" ng-controller="loginCtrl">
+     
+	<div class="limiter">
+     
+		<div class="container-login100">
+     
+			<div class="wrap-login100">
+                 
+				<form class="login100-form validate-form" style="text-align: center;" name="loginForm">
+                        <img style="width:100px; height:100px;" src="./imgs/voters.png"/> 
+					<span id="title-login" class="login100-form-title p-b-26">
+						Voting App
+					</span>
+			
+<div class="row" style="text-align: center;">
+        <label>User Criedntial </label>
+    <div class="col-md-8">
+					
+                      
+						<input   class="form-control login-field" type="text" ng-model="user.NationalNumber" name="NationalNumber" required>
+                        <p ng-show="loginForm.NationalNumber.$dirty &&  loginForm.NationalNumber.$error.required">* NationalNumber is required</p>
+					</div>
+
+					
+                    </div>
+                    <div class="row" style="text-align: center;">
+                            <label>Password</label>
+                            <div class="col-md-8">
+                           
+						<input class="form-control login-field" type="password" ng-model="user.password"  name="password" required>
+                        <p ng-show="loginForm.password.$dirty && loginForm.password.$error.required">*password is required </p>
+                        <!-- <p ng-show="loginForm.password.$dirty && loginForm.password.$error.minlength">*Password must be longer than 6 characters </p> -->
+                 
+                    </div>
+                    </div>
+                   
+<div class="roles-area">
+                    <div class="row" >
+                            <div class=" col-md-5">
+                              </div>
+                              <div class=" col-md-4">
+                            <span >Candidate</span>
+                          <input type="radio" ng-click=check($event,'candidate')  name="candidate" ng-model="checked" value="candidate">
+                          <span>Judjment</span>
+                          <input type="radio" ng-click=check($event,'judgment') name="judgment" ng-model="checked" value="judgment">
+                          </div>
+                          </div>
+                        </div>
+                        
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            
+							<button ng-click="loginEmail(loginForm,user)" class="login100-form-btn btn-custom" ng-disabled="((!loginForm.candidate.$dirty && !loginForm.judgment.$dirty) || loginForm.$invalid)" >
+                                Login
+                                
+							</button>
+						</div>
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+
+	
+
+	
+
+</body>
+</html>

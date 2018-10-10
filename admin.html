@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VotingApp</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="./js/core/jquery.min.js"></script>
+<script src="https://cdn.ethers.io/scripts/ethers-v3.min.js"
+charset="utf-8"
+type="text/javascript">
+</script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script src="./js/modules/timepickerdirective.min"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+<script src="./js/modules/firebasecom.js"></script>
+<script src="./js/modules/abi.js"></script>
+
+<script src="./js/modules/angular-datepicker.js"></script>
+<script src="./js/loading.js"></script>
+<script src="./js/modules/ethtx.js"></script>
+<script src="./js/modules/web3.js"></script>
+<script src="./js/modules/directives.js"></script>
+    <script src="./js/modules/service.js"></script>
+    <script src="./js/modules/controllers.js"></script>
+    
+    <script src="./js/modules/date.js"></script>    
+<!--===============================================================================================-->
+<script src="./js/modules/angular-time-picker.js"></script>
+<script src="./js/modules/md-time-picker.js"></script>
+<script src ="./js/modules/app.js">
+</script>
+
+</head>
+<body ng-app="starter" ng-controller="adminLoginCtrl">
+     
+	<div class="limiter">
+     
+		<div class="container-login100">
+     
+			<div class="wrap-login100">
+                 
+                <form class="login100-form validate-form" style="text-align: center;" name="loginForm">
+                        <img style="width:100px; height:100px;" src="./imgs/voters.png"/> 
+					<span id="title-login" class="login100-form-title p-b-26">
+						Voting App Admin 
+					</span>
+			
+<div class="row" style="text-align: center;">
+        <label>National Number</label>
+    <div class="col-md-8">
+					
+                      
+						<input   class="form-control login-field" type="text" ng-model="user.adminEmail" name="adminEmail" required>
+                        <p ng-show="loginForm.adminEmail.$dirty &&  loginForm.adminEmail.$error.required">* NationalNumber is required</p>
+					</div>
+
+					
+                    </div>
+                    <div class="row" style="text-align: center;">
+                            <label>Password</label>
+                            <div class="col-md-8">
+                           
+						<input class="form-control login-field" type="password" ng-model="user.adminPassword"  name="adminPassword" required>
+                        <p ng-show="loginForm.adminPassword.$dirty && loginForm.adminPassword.$error.required">*password is required </p>
+                        <!-- <p ng-show="loginForm.password.$dirty && loginForm.password.$error.minlength">*Password must be longer than 6 characters </p> -->
+                 
+                    </div>
+                    </div>
+                   
+
+                    
+<div class="container-login100-form-btn">
+        <div class="wrap-login100-form-btn">
+							
+							<button ng-click="loginAsAdmin(loginForm,user)"  class="btn-custom" ng-disabled="loginForm.$invalid">
+								Login
+                            </button>
+                            
+                        </div>
+                        </div>
+					
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+
+	
+
+	
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "name": "cmsvotingapp",
+  "version": "1.0.0",
+  "description": "new template for cms voting app created by new aeon blockchain team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NewAeon/CMSVOTINGAPP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NewAeon/CMSVOTINGAPP/issues"
+  },
+  "homepage": "https://github.com/NewAeon/CMSVOTINGAPP#readme",
+  "dependencies": {
+<<<<<<< HEAD
+    "angular-datetime-inputs": "^0.2.6",
+=======
+    "angular-jquery-timepicker": "^0.13.1",
+>>>>>>> de698ca6bd251f2d6c038512b5644e05eeca8498
+    "angular-material-time-picker": "^1.0.8",
+    "angular-timepicker": "^1.0.11",
+    "angularjs-datepicker": "^2.1.23",
+    "await-transaction-mined": "^1.0.11",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "angular-time-picker": "^1.1.0"
+  }
+}
